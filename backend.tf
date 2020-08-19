@@ -2,6 +2,6 @@ terraform {
   backend "gcs" {
    # project = "lyrical-shore-262101"
     bucket  = "terraform-state"
-    credentials = "cred.json"
+    GOOGLE_BACKEND_CREDENTIALS = "cred.json"
   }
 }
