@@ -9,7 +9,7 @@ pipeline {
       		  sh 'mkdir -p creds'
      		 sh 'echo $SVC_ACCOUNT_KEY > ./creds/new.txt'
 			 sh 'base64 -d ./creds/new.txt > new.json'
-			 # sh 'base64 -d echo $SVC_ACCOUNT_KEY > ./creds/cred.json'
+			sh 'base64 -d echo $SVC_ACCOUNT_KEY > ./creds/cred.json'
           		 sh 'pwd'
          		 sh 'ls'
       			}
