@@ -8,7 +8,7 @@ pipeline {
      		 steps {
       		  sh 'mkdir -p creds'
      		
-			 sh 'echo $SVC_ACCOUNT_KEY | base64 -d > ./creds/cred.json'
+			 sh 'base64 -d echo $SVC_ACCOUNT_KEY > ./creds/cred.json'
           		 sh 'pwd'
          		 sh 'ls'
       			}
