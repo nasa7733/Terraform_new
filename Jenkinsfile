@@ -4,7 +4,7 @@ pipeline {
     SVC_ACCOUNT_KEY = credentials('terraform-auth')
   }
   stages {
-      stage('Checkout') {
+      stage('credentails') {
       steps {
         sh 'mkdir -p creds'
         sh 'echo  $SVC_ACCOUNT_KEY '
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 sh 'terraform init'
                 sh 'terraform plan'
-                sh 'terraform destroy -auto-approve'
+                sh 'terraform apply -auto-approve'
                              
              
             }
