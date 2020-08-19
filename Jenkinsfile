@@ -1,6 +1,5 @@
 pipeline {
     agent any
-     
        environment {
     SVC_ACCOUNT_KEY = credentials('terraform-auth')
   }
@@ -13,17 +12,16 @@ pipeline {
         sh 'echo $SVC_ACCOUNT_KEY  > ./creds/cred.json'
         sh 'pwd'
         sh 'ls'
+      			}
+      		}
       }
-      }
-      }
-  
+    
         stage ('checkout'){
             steps {
                 git branch: 'master', url: 'https://github.com/nasa7733/Terraform_new.git'
             }
         }
       
-
 		stage('Set Terraform path') {
             steps {
                 script {
@@ -44,7 +42,8 @@ pipeline {
                              
              
             }
-        
+        }
+}
         
       
       
