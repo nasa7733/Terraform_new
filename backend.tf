@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
     bucket      = "storage-tfstate"
-    credentials = "./cred.json"
+    credentials = "./creds/cred.json"
   }
 }
