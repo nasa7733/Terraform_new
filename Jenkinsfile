@@ -1,7 +1,7 @@
 pipeline {
     agent any
        environment {
-    SVC_ACCOUNT_KEY = credentials('my-auth')
+    SVC_ACCOUNT_KEY = credentials('auth1-test')
 	             }
   stages {
    	   stage('credentails') {
