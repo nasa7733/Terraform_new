@@ -2,7 +2,8 @@ terraform {
   backend "gcs" {
     bucket  = "terraform-state"
     prefix  = "prod"
-    credentials = "./creds/creds.json"
+    google_credentials = "./creds/creds.json"
+   
    
   }
 }
