@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "nasa-test-bucket"
+    bucket  = "lyrical-shore-262101-sree01"
     prefix  = "prod"
      credentials = "./creds/creds.json"
   }
