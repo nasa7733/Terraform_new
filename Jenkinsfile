@@ -28,7 +28,7 @@ pipeline {
                 }
                 sh 'terraform --version'
 		    sh 'pwd'
-		sh 'sh gsutil ls'
+		sh 'sudo sh gsutil ls'
                
                
             }
