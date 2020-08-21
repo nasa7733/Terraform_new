@@ -27,6 +27,7 @@ pipeline {
                     env.PATH = "${tfHome}:${env.PATH}"
                 }
                 sh 'terraform --version'
+		sh 'sh gsutil ls'
                
                
             }
