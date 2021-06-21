@@ -8,6 +8,7 @@ pipeline {
      		 steps {
       		  sh 'mkdir -p creds'
 			 sh 'echo $SVC_ACCOUNT_KEY  > ./creds/creds.json'
+			 sh 'echo ./creds/creds.json'
 			
       			}
       		}
