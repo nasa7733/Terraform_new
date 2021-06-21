@@ -7,7 +7,7 @@ pipeline {
    	   stage('credentails') {
      		 steps {
       		  sh 'mkdir -p creds'
-			 sh 'echo $SVC_ACCOUNT_KEY | base64 > ./creds/creds.json'
+			 sh 'echo $SVC_ACCOUNT_KEY  > ./creds/creds.json'
 			
       			}
       		}
