@@ -1,7 +1,7 @@
 # This is the provider used to spin up the gcloud instance
 provider "google" {
   credentials = file("creds.json")
- project = "midevops05"
+ project = "midevops-05"
   region  = "us-east1"
  
 }
