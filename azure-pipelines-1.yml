@@ -18,3 +18,8 @@ steps:
     command: 'init'
     backendServiceGCP: 'gcp-project'
     backendGCPBucketName: 'rohit-46'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'gcp'
+    command: 'plan'
+    environmentServiceNameGCP: 'gcp-project'
