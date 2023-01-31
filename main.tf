@@ -10,7 +10,7 @@ provider "google" {
 resource "google_compute_instance" "vm-instance" {
   name         = "test01"
   machine_type = "f1-micro"
-  zone         = "us-west1-a"
+  #zone         = "us-west1-a"
  # tags = ["nasa", "prod"]
 
 
