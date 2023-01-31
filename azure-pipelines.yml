@@ -10,8 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 - task: TerraformInstaller@0
   inputs:
     terraformVersion: 'latest'
@@ -30,6 +28,11 @@ steps:
     environmentServiceNameGCP: 'gcp-project'
     backendServiceGCP: 'gcp-project'
     backendGCPBucketName: 'rohit-46'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'gcp'
+    command: 'apply'
+    environmentServiceNameGCP: 'gcp-project'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
