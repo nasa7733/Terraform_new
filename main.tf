@@ -10,8 +10,8 @@ provider "google" {
 resource "google_compute_instance" "vm-instance" {
   name         = "test01"
   machine_type = "f1-micro"
-  zone         = "us-east1-b"
- tags = ["nasa", "prod"]
+  zone         = "us-east1-c"
+ # tags = ["nasa", "prod"]
 
 
   boot_disk {
