@@ -13,6 +13,24 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'gcp'
+    command: 'init'
+    backendServiceGCP: 'gcp-project'
+    backendGCPBucketName: 'rohit-46'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'gcp'
+    command: 'plan'
+    environmentServiceNameGCP: 'gcp-project'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'gcp'
+    command: 'apply'
+    commandOptions: '--auto-approve'
+    environmentServiceNameGCP: 'gcp-project'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
