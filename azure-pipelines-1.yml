@@ -12,18 +12,18 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- task: init
+- task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
     command: 'init'
     backendServiceGCP: 'gcp-project'
     backendGCPBucketName: 'rohit-46'
-- task: plan
+- task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
     command: 'plan'
     environmentServiceNameGCP: 'gcp-project'
-- task: apply
+- task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
     command: 'apply'
