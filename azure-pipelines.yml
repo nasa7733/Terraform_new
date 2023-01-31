@@ -17,10 +17,9 @@ steps:
   inputs:
     provider: 'gcp'
     command: 'init'
-    environmentServiceNameGCP: 'gcp-project'
     backendServiceGCP: 'gcp-project'
     backendGCPBucketName: 'rohit-46'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    backendGCPPrefix: 'nasa'
 - task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
@@ -34,7 +33,3 @@ steps:
     command: 'apply'
     environmentServiceNameGCP: 'gcp-project'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
