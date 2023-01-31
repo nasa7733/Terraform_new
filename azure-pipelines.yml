@@ -19,6 +19,9 @@ steps:
   inputs:
     provider: 'gcp'
     command: 'init'
+    environmentServiceNameGCP: 'gcp-project'
+    backendServiceGCP: 'gcp-project'
+    backendGCPBucketName: 'rohit-46'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: TerraformTaskV3@3
   inputs:
