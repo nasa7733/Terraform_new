@@ -2,7 +2,7 @@
 provider "google" {
  #credentials = file("creds.json")
  project = "gcpkole"
- region  = "us-west1"
+ region  = "us-central1"
  
 }
 
