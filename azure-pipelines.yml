@@ -23,6 +23,10 @@ steps:
 - task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
+    command: 'validate'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'gcp'
     command: 'plan'
     environmentServiceNameGCP: 'gcp-project'
     backendServiceGCP: 'gcp-project'
