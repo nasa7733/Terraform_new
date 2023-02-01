@@ -28,13 +28,11 @@ steps:
   inputs:
     provider: 'gcp'
     command: 'plan'
-    environmentServiceNameGCP: 'gcp-ci'
-    backendServiceGCP: 'gcp-ci'
-    backendGCPBucketName: 'rohit-46'
+    environmentServiceNameGCP: 'gcp-project'
 - task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
     command: 'apply'
-    environmentServiceNameGCP: 'gcp-ci'
+    environmentServiceNameGCP: 'gcp-project'
 
 
