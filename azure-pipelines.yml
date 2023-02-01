@@ -21,8 +21,6 @@ stages:
 - stage: stage2
   jobs:
   - job: select_terraform_version
-    pool:
-      vmImage: ubuntu-latest
     steps:
     - task: TerraformInstaller@0
       inputs:
@@ -30,8 +28,6 @@ stages:
 - stage: stage3
   jobs:
   - job: terraform_init
-    pool:
-      vmImage: ubuntu-latest
     steps:
     - task: TerraformTaskV3@3
       inputs:
@@ -42,8 +38,6 @@ stages:
 - stage: stage4
   jobs:
   - job: terraform_plan
-    pool:
-      vmImage: ubuntu-latest
     steps:
     - task: TerraformTaskV3@3
       inputs:
@@ -53,8 +47,6 @@ stages:
 - stage: stage5
   jobs:
   - job: terraform_apply
-    pool:
-      vmImage: ubuntu-latest
     steps:
     - task: TerraformTaskV3@3
       inputs:
