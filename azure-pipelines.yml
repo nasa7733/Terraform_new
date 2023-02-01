@@ -17,7 +17,7 @@ steps:
   inputs:
     provider: 'gcp'
     command: 'init'
-    backendServiceGCP: 'gcp-project'
+    backendServiceGCP: 'gcp-ci'
     backendGCPBucketName: 'rohit-46'
     backendGCPPrefix: 'nasa'
 - task: TerraformTaskV3@3
@@ -28,12 +28,12 @@ steps:
   inputs:
     provider: 'gcp'
     command: 'plan'
-    environmentServiceNameGCP: 'gcp-project'
-    backendServiceGCP: 'gcp-project'
+    environmentServiceNameGCP: 'gcp-ci'
+    backendServiceGCP: 'gcp-ci'
     backendGCPBucketName: 'rohit-46'
 - task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
     command: 'apply'
-    environmentServiceNameGCP: 'gcp-project'
+    environmentServiceNameGCP: 'gcp-ci'
 
