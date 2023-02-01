@@ -18,36 +18,21 @@ stages:
       displayName: 'Run a one-line script'
       inputs:
         script: echo Hello, world!
-- stage: stage2
-  jobs:
-  - job: select_terraform_version
-    steps:
     - task: TerraformInstaller@0
       inputs:
         terraformVersion: 'latest'
-- stage: stage3
-  jobs:
-  - job: terraform_init
-    steps:
     - task: TerraformTaskV3@3
       inputs:
         provider: 'gcp'
         command: 'init'
         backendServiceGCP: 'gcp-sc'
         backendGCPBucketName: 'rohit-46'
-- stage: stage4
-  jobs:
-  - job: terraform_plan
-    steps:
+    
     - task: TerraformTaskV3@3
       inputs:
         provider: 'gcp'
         command: 'plan'
         environmentServiceNameGCP: 'gcp-sc'
-- stage: stage5
-  jobs:
-  - job: terraform_apply
-    steps:
     - task: TerraformTaskV3@3
       inputs:
         provider: 'gcp'
