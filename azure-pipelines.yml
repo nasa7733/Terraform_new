@@ -20,7 +20,7 @@ stages:
         script: echo Hello, world!
 - stage: stage2
   jobs:
-  - job: select terraform version
+  - job: select_terraform_version
     pool:
       vmImage: ubuntu-latest
     steps:
@@ -29,7 +29,7 @@ stages:
         terraformVersion: 'latest'
 - stage: stage3
   jobs:
-  - job: terraform init
+  - job: terraform_init
     pool:
       vmImage: ubuntu-latest
     steps:
@@ -41,7 +41,7 @@ stages:
         backendGCPBucketName: 'rohit-46'
 - stage: stage4
   jobs:
-  - job: terraform plan
+  - job: terraform_plan
     pool:
       vmImage: ubuntu-latest
     steps:
@@ -52,7 +52,7 @@ stages:
         environmentServiceNameGCP: 'gcp-sc'
 - stage: stage5
   jobs:
-  - job: terraform apply
+  - job: terraform_apply
     pool:
       vmImage: ubuntu-latest
     steps:
