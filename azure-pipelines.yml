@@ -29,6 +29,6 @@ steps:
 - task: TerraformTaskV3@3
   inputs:
     provider: 'gcp'
-    command: 'apply'
+    command: 'destroy'
     commandOptions: '--auto-approve'
     environmentServiceNameGCP: 'gcp-sc'
